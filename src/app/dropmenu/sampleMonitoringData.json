@@ -1,0 +1,119 @@
+[ 
+    {
+        "id": "Datadog",
+        "text": "Datadog",
+        "icon": "Datadog",
+        "mapID": "5065",
+        "Datadog":[{
+            "id": "obsidian",
+            "text": "obsidian",
+            "icon": "obsidian"
+        },
+        {
+                "id": "datadog.agent.python.version",
+                "text": "datadog.agent.python.version",
+                "icon": "datadog.agent.python.version"
+            },{
+                "id": "datadog.agent.running",
+                "text": "datadog.agent.running",
+                "icon": "datadog.agent.running"
+            },
+            {
+                "id": "datadog.estimated_usage.containers",
+                "text": "datadog.estimated_usage.containers",
+                "icon": "datadog.estimated_usage.containers"
+            }, {
+                "id": "datadog.estimated_usage.hosts",
+                "text": "datadog.estimated_usage.hosts",
+                "icon": "datadog.estimated_usage.hosts"
+            }, {
+                "id": "datadog.estimated_usage.metrics.custom",
+                "text": "datadog.estimated_usage.metrics.custom",
+                "icon": "datadog.estimated_usage.metrics.custom"
+            }
+        ,{
+            "id": "victoria",
+            "text": "victoria",
+            "icon": "victoria",
+            "children":[{
+                
+                }]
+        }]
+    },
+    {
+        "id": "DummyMonitoring",
+        "text": "DummyMonitoring",
+        "mapID": "5067",
+        "DummyMonitoring":[{
+            "id": "AFS-Dublin",
+            "text": "AFS-Dublin",
+            "icon": "AFS-Dublin"
+        },{
+            "id": "AFS-Paris",
+            "text": "AFS-Paris",
+            "icon": "AFS-Paris"
+        }]
+    },
+    {
+        "id": "Dependencias",
+        "text": "Dependencias",
+        "mapID": "5066",
+        "icon": "Dependencias"
+    },
+    {
+        "id": "DummyCMDB",
+        "text": "DummyCMDB",
+        "mapID": "",
+        "icon": "DummyCMDB"
+
+    },
+    {
+        "id": "Nagios",
+        "text": "Nagios",
+        "mapID": "",
+        "icon": "Nagios"
+
+    },
+    {
+        "id": "Nagios Local",
+        "text": "Nagios Local",
+        "mapID": "",
+        "icon": "Nagios Local"
+
+    },
+    {
+        "id": "Op5",
+        "text": "Op5",
+        "mapID": "",
+        "icon": "Op5"
+
+    },
+    {
+        "id": "SCOM",
+        "text": "SCOM",
+        "mapID": "",
+        "icon": "SCOM"
+
+    },
+    {
+        "id": "TestMonitoring",
+        "text": "TestMonitoring",
+        "mapID": "",
+        "icon": "TestMonitoring"
+
+    },
+    {
+        "id": "Zabbix",
+        "text": "Zabbix",
+        "mapID": "",
+        "icon": "Zabbix"
+
+    },
+    {
+        "id": "Clipboard",
+        "text": "Clipboard",
+        "mapID": "",
+        "icon": "Clipboard"
+
+    }
+    ]
