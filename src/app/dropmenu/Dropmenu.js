@@ -25,7 +25,8 @@ export default class Dropmenu extends React.Component {
       clickCountData: {
         id: null,
         count:0,
-      }
+      },
+      storeData : {}
     };
 
     this.setWrapperRef = this.setWrapperRef.bind(this);
@@ -89,11 +90,11 @@ export default class Dropmenu extends React.Component {
     let { id, key } = this.state.treeSelected;
     let { id: lastNodeId, count  } = this.state.clickCountData;
     
-    if(count < 5 ) {
+    if(count < 4  ) {
       this.setState({
         clickCountData:{
           id,
-          count: lastNodeId != id ?  0 : count+1,
+          count: count+1,
         }
       })
       return;
@@ -101,7 +102,7 @@ export default class Dropmenu extends React.Component {
     if(action == "ADD") {  
       let modifiedData = mergeModifiedData(this.state.data, id, action, key, {
         "id": "AddItem_" + Math.random(0,100),
-        "text": "Item",
+         "text": "Item",
       })
       console.log("after modified", modifiedData);
       if(modifiedData) {
@@ -110,7 +111,7 @@ export default class Dropmenu extends React.Component {
           contextMenuShow:false,
           clickCountData:{
             id,
-            count: lastNodeId != id ?  0 : count++,
+            count: 0,
           }
         })
       }
@@ -123,11 +124,41 @@ export default class Dropmenu extends React.Component {
           data:modifiedData,
           clickCountData:{
             id,
-            count: lastNodeId != id ?  0 : count++,
+            count: 0,
           },
           contextMenuShow:false,
         })
       }
+    }  
+    else if(action == "CUT") {
+      let modifiedData = mergeModifiedData( this.state.data, id, action, key, null)
+      console.log('CUT',id);
+      this.state.storeData = {"id":id,
+                    "text":id};
+      if(modifiedData) {
+        this.setState({
+          data:modifiedData,
+          clickCountData:{
+            id,
+            count: 0,
+          },
+          contextMenuShow:false,
+        })
+      }
+    }  else if(action == "PASTE") {
+      let modifiedData = mergeModifiedData( this.state.data, id, action, key, this.state.storeData)
+      if(modifiedData) {
+        this.setState({
+          data:modifiedData,
+          storeData:{},
+          clickCountData:{
+            id,
+            count: 0,
+          },
+          contextMenuShow:false,
+        })
+      }
+      
     }
 
   }
@@ -234,14 +265,21 @@ const typeStyles = {
   verticalAlign: 'middle'
 }
 
+const iconStyles = {
+  display: 'inline-block',
+ 
+}
 let TreeMakerWithJson=function(props){
   var dataJ = props.treedata;
   var title = '';
   var tempTreeData = [];
   var keyList = [];
+  var icon = '';
   // console.log('TreeMakerWithJson',props);
   
   Object.keys(dataJ).map(function(key1, index) {
+    
+    
       if(typeof dataJ[key1]!=="string" && dataJ[key1].length>0){
         var jsonVariable = {};
         jsonVariable[key1] = dataJ[key1];
@@ -249,6 +287,9 @@ let TreeMakerWithJson=function(props){
         keyList.push(key1);
       } else if(key1 == 'text') {
         title = dataJ[key1];
+        icon = `'${dataJ.data}'`;
+        console.log('icon ',icon);
+        
       } else {
         return '';
       }
@@ -264,8 +305,7 @@ let TreeMakerWithJson=function(props){
             
         </span>
         }   
-      canHide 
-      open>
+       open>
         <TreeMakerWithJsonArray 
           treeClick={props.treeClick} 
           keyList={keyList} 
@@ -279,7 +319,7 @@ let TreeMakerWithJson=function(props){
         onContextMenu={(Event) => props.treeClick(Event, { id: dataJ.id , key: title}  )}>{title}
           
       </span>
-      } id={dataJ.id} canHide style={{color:'#81c081'}}></Tree></div>);
+      } id={dataJ.id}  style={{color:'#81c081'}}></Tree></div>);
   }
 }
 
@@ -290,6 +330,7 @@ let TreeMakerWithJsonArray = function(props){
       dataJ.map((item, index) => {
         var key2 = keyList[index];
           if(typeof item[key2]!=="string" && item[key2].length>0){
+            
             if(item[key2].length > 1) {
               return (<Tree  
                 key={props.id + '_' + key2}
@@ -299,15 +340,18 @@ let TreeMakerWithJsonArray = function(props){
                   onContextMenu={(Event) =>  props.treeClick(Event, { id: props.id , key: key2}  )}>{key2}
                 </span>
                 }  
-                canHide>
+           
+                >
                   <TreeMakerWithArray treedata={item[key2]} treeClick={props.treeClick}></TreeMakerWithArray></Tree>);
             } else {
-              return (<Tree  key={props.id + '_' + key2} type="Apple" content={
+              return (<Tree key={props.id + '_' + key2} 
+      
+            content={
                 <span 
                   onClick={(Event) => props.treeClick(Event, { id: props.id , key: key2} )} 
                   onContextMenu={(Event) =>  props.treeClick(Event, { id: props.id , key: key2}  )}>{key2}
                 </span>
-                }  canHide ></Tree>);
+                }   ></Tree>);
             }
           } else {
             return '';

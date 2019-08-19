@@ -26,6 +26,7 @@ export default class ContextMenu extends React.Component {
     }
     
     _handleContextMenu = (event) => {
+        
         console.log("this.state.visible",this.state.visible)
         if(!this.state.visible) return false
         event.preventDefault();
@@ -73,11 +74,12 @@ export default class ContextMenu extends React.Component {
         if (visible) this.setState({ visible: false, });
     };
     
+    
     render() {
         const { visible } = this.state;
         
         return(visible || null) && 
-            <div ref={ref => {this.root = ref}} className="contextMenu">
+            <div ref={ref => {this.root = ref}} style={contextMenuStyles} className="contextMenu">
                 <div className="contextMenu--option" onClick={() => {
                     console.log("contextMenu Props", this.props)
                     this.props.contextMenuAction("ADD")
@@ -89,3 +91,7 @@ export default class ContextMenu extends React.Component {
     };
 }
 
+
+const contextMenuStyles={
+    padding: '10px',
+}

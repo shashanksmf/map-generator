@@ -7,6 +7,7 @@ import '@progress/kendo-react-dropdowns'
 import 'react-router-dom'
 import Dropmenu from './dropmenu/Dropmenu';
 import ElementDetails from './dropmenu/elementDetails/elementDetails';
+import Monitoring from './dropmenu/Monitoring/Monitoring';
 import './style.css';
 
 class App extends React.Component {
@@ -83,7 +84,7 @@ class App extends React.Component {
                         </Splitter>
                         <div className="pane-content">
                             <Headerbar children="advanced"/>
-                            
+                            <Monitoring/>
                         </div>
                     </Splitter>
 

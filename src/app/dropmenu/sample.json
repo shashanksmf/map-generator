@@ -2,12 +2,12 @@
 {
 	"id": "comercial",
 	"text": "Comercial",
-	"icon": "comercial",
+	"icon": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg",
 	"mapID": "5065",
 	"primary": [{
 		"id": "ventas",
 		"text": "Ventas",
-		"icon": "ventas",
+		"icon": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg",
 		"children": [
 			{
 			"id": "ranking",
@@ -17,32 +17,32 @@
 				"id": "ranking_acme",
 				"text": "acme",
 				"icon": "ventas",
-				"data": "aplicaciones/data/ventasRanking_acme/ventasRanking_acme.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			},
 			{
 				"id": "ranking_cadenas",
 				"text": "Cadenas",
 				"icon": "ventas",
-				"data": "aplicaciones/data/ventasRanking_cadenas/ventasRanking_cadenas.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			}]
 		},
 		{
 			"id": "analisisHistorico",
 			"text": "Análisis Histórico",
-			"icon": "analisishistoricos",
+			"icon": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg",
 			"chilren": [{
 				"id": "analisisHistorico_acme",
 				"text": "acme",
 				"icon": "analisishistoricos",
 				"size": 1.2,
-				"data": "aplicaciones/data/analisisHistoricos_acme/analisisHistoricos_acme.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			},
 			{
 				"id": "analisisHistorico_cadenas",
 				"text": "Cadenas",
 				"icon": "analisishistoricos",
 				"size": 1.2,
-				"data": "aplicaciones/data/analisisHistoricos_cadenas/analisisHistoricos_cadenas.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			}]
 		},
 		{
@@ -53,13 +53,13 @@
 				"id": "enviadoVendido_acme",
 				"text": "acme",
 				"icon": "enviadovendido",
-				"data": "aplicaciones/data/ventasEnviadoVendido_acme/ventasEnviadoVendido_acme.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			},
 			{
 				"id": "enviadoVendido_cadenas",
 				"text": "Cadenas",
 				"icon": "enviadovendido",
-				"data": "aplicaciones/data/ventasEnviadoVendido_cadenas/ventasEnviadoVendido_cadenas.svg"
+				"data": "https://demo.obsidiandemo.com/obsidian/console/images/subservice.svg"
 			}]
 		},
 		{
@@ -100,13 +100,6 @@
 			"size": 0.5,
 			"data": "aplicaciones/data/promociones/promociones.svg"
 		}]
-	},
-	{
-		"id": "otros",
-		"text": "Otros",
-		"hidetext": true,
-		"size": 0.5,
-		"icon": "others"
 	},
 	{
 		"id": "distribucion",
