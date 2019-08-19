@@ -302,7 +302,12 @@ let TreeMakerWithJsonArray = function(props){
                 canHide>
                   <TreeMakerWithArray treedata={item[key2]} treeClick={props.treeClick}></TreeMakerWithArray></Tree>);
             } else {
-              return (<Tree  key={props.id + '_' + key2} type="Apple" content={key2} canHide></Tree>);
+              return (<Tree  key={props.id + '_' + key2} type="Apple" content={
+                <span 
+                  onClick={(Event) => props.treeClick(Event, { id: props.id , key: key2} )} 
+                  onContextMenu={(Event) =>  props.treeClick(Event, { id: props.id , key: key2}  )}>{key2}
+                </span>
+                }  canHide ></Tree>);
             }
           } else {
             return '';
