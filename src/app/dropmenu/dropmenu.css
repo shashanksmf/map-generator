@@ -163,3 +163,7 @@ img {
   background-color: var(--color-background-active);
   box-shadow: 0 0 2px var(--color-border);
 }
+
+.contextMenu {
+  z-index: 99;
+}

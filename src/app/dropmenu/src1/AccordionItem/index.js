@@ -182,7 +182,7 @@ export default class AccordionItem extends Component {
       titleClassName,
       titleTag
     } = this.props;
-    console.log("thisprops",this.props);
+    // console.log("thisprops",this.props);
     const { maxHeight, overflow } = this.state;
 
     return (

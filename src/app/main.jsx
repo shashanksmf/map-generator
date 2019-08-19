@@ -6,6 +6,8 @@ import '@progress/kendo-react-intl'
 import '@progress/kendo-react-dropdowns'
 import 'react-router-dom'
 import Dropmenu from './dropmenu/Dropmenu';
+import ElementDetails from './dropmenu/elementDetails/elementDetails';
+import './style.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -21,8 +23,13 @@ class App extends React.Component {
                 { size: '40%' },
                 { },
                 { size: '30%', resizable: false }
-            ]
+            ],
+            nodeId:null,
+            logs:[],
+            elemId:''
         };
+
+        this.selectedServices = this.selectedServices.bind(this)
     }
 
     onLayoutChange = (updatedState) => {
@@ -38,6 +45,12 @@ class App extends React.Component {
         });
     }
 
+    selectedServices = id => {
+        const elemId = Math.floor(Math.random(0,100) * 1000);
+        this.state.logs.push(`Action: update. Item id: ${elemId}`);
+        this.setState({ nodeId: id, logs: this.state.logs, elemId: elemId   })
+    } 
+
     render() {
         return (
             <div className="all-area">
@@ -49,7 +62,7 @@ class App extends React.Component {
                     >
                         <div className="pane-content">
                             <Headerbar children="map generator"/>
-                            <Dropmenu />
+                            <Dropmenu selectedServices={this.selectedServices} />
                         </div>
                         <Splitter
                             panes={this.state.nestedPanes}
@@ -59,9 +72,13 @@ class App extends React.Component {
                         >
                             <div className="pane-content">
                                 <Headerbar children="element details"/>
+                                <ElementDetails nodeId={this.state.nodeId} elemId={this.state.elemId}></ElementDetails>
                             </div>
-                            <div className="pane-content">
+                            <div className="pane-content logs">
                                 <Headerbar children="log"/>
+                                <div>
+                                    {this.state.logs.map(item => <div>{item}</div>)}
+                                </div>
                             </div>
                         </Splitter>
                         <div className="pane-content">

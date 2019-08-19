@@ -1,4 +1,5 @@
-[{
+[ 
+{
 	"id": "comercial",
 	"text": "Comercial",
 	"icon": "comercial",
@@ -7,11 +8,12 @@
 		"id": "ventas",
 		"text": "Ventas",
 		"icon": "ventas",
-		"children": [{
+		"children": [
+			{
 			"id": "ranking",
 			"text": "Ranking",
 			"icon": "applicationsmap",
-			"levels": [{
+			"chilren": [{
 				"id": "ranking_acme",
 				"text": "acme",
 				"icon": "ventas",
@@ -28,7 +30,7 @@
 			"id": "analisisHistorico",
 			"text": "Análisis Histórico",
 			"icon": "analisishistoricos",
-			"levels": [{
+			"chilren": [{
 				"id": "analisisHistorico_acme",
 				"text": "acme",
 				"icon": "analisishistoricos",
@@ -47,7 +49,7 @@
 			"id": "enviadoVendido",
 			"text": "Enviado Vendido",
 			"icon": "enviadovendido",
-			"levels": [{
+			"children": [{
 				"id": "enviadoVendido_acme",
 				"text": "acme",
 				"icon": "enviadovendido",
@@ -65,7 +67,7 @@
 			"text": "Multitransferencias",
 			"hidetext": true,
 			"icon": "multitransferencia",
-			"levels": [{
+			"chilren": [{
 				"id": "multitransferencias_acme",
 				"text": "acme",
 				"icon": "multitransferencia",
@@ -264,7 +266,7 @@
 			"id": "agentes",
 			"text": "Web de Agentes",
 			"icon": "webdeagentes",
-			"levels": [{
+			"children": [{
 				"id": "agentesdirectos",
 				"text": "Agentes Directos",
 				"data": "aplicaciones/data/agentesDirectos/agentesDirectos.svg",
@@ -281,7 +283,7 @@
 			"id": "lex",
 			"text": "LEX",
 			"icon": "lex",
-			"levels": [{
+			"children": [{
 				"id": "lexPlataforma",
 				"text": "Plataforma",
 				"data": "aplicaciones/data/lexPlataforma/lexPlataforma.svg",
@@ -315,7 +317,7 @@
 			"id": "lexdoc",
 			"text": "LEXDOC",
 			"icon": "lexdoc",
-			"levels": [{
+			"children": [{
 				"id": "lexdocWeb",
 				"text": "Web",
 				"data": "aplicaciones/data/lexdocWeb/lexdocWeb.svg",
@@ -356,7 +358,7 @@
 			"id": "hif",
 			"text": "HIF",
 			"icon": "hif",
-			"levels": [{
+			"children": [{
 				"id": "hifEjb",
 				"text": "EJB",
 				"data": "aplicaciones/data/hifEjb/hifEjb.svg",
@@ -396,7 +398,7 @@
 			"id": "sam",
 			"text": "SAM",
 			"icon": "samservicios",
-			"levels": [{
+			"children": [{
 				"id": "sam_asignaciontransporte",
 				"text": "Asignación Transporte",
 				"data": "aplicaciones/data/samAsignacionTransporte/samAsignacionTransporte.svg",
@@ -449,7 +451,7 @@
 			"id": "enviosMateriaPrima",
 			"text": "Envíos Materia Prima",
 			"icon": "enviosmmpp",
-			"levels": [{
+			"children": [{
 				"id": "enviosMMPP",
 				"text": "Envíos MMPP",
 				"data": "aplicaciones/data/enviosMMPP/enviosMMPP.svg",
@@ -471,7 +473,7 @@
 			"id": "aduanasPadre",
 			"text": "Aduanas",
 			"icon": "aduanas",
-			"levels": [{
+			"children": [{
 				"id": "aduanas",
 				"text": "Aduanas",
 				"data": "aplicaciones/data/aduanas/aduanas.svg",
@@ -493,7 +495,7 @@
 			"id": "agenda",
 			"text": "Agenda",
 			"icon": "agenda",
-			"levels": [{
+			"children": [{
 				"id": "agendaDeTransporte",
 				"text": "Agenda de Transporte",
 				"icon": "agendadetransporte"
@@ -508,7 +510,7 @@
 			"id": "artex",
 			"text": "Artex",
 			"icon": "artex",
-			"levels": [{
+			"children": [{
 				"id": "artexCliente",
 				"text": "Artex",
 				"data": "aplicaciones/data/artexCliente/artexCliente.svg",
@@ -543,7 +545,7 @@
 			"id": "planificadorDeTiendas",
 			"text": "Planificador de Tiendas",
 			"icon": "planificador",
-			"levels": [{
+			"children": [{
 				"id": "planificador",
 				"text": "Planificador",
 				"data": "aplicaciones/data/planificador/planificador.svg",
@@ -576,7 +578,7 @@
 			"id": "faroPadre",
 			"text": "Faro",
 			"icon": "faro",
-			"levels": [{
+			"children": [{
 				"id": "faroWeb",
 				"text": "Faro (Web)",
 				"icon": "faroweb"
@@ -596,7 +598,7 @@
 			"id": "hitTerrestre",
 			"text": "HIT",
 			"icon": "hit",
-			"levels": [{
+			"children": [{
 				"id": "hitWS",
 				"text": "HIT (WS)",
 				"data": "aplicaciones/data/hitWS/hitWS.svg",
@@ -613,7 +615,7 @@
 			"id": "ordenesDeTransportePadre",
 			"text": "Órdenes de Transporte",
 			"icon": "ordenesdetransporte",
-			"levels": [{
+			"children": [{
 				"id": "ottWeb",
 				"text": "OTT (Web)",
 				"data": "aplicaciones/data/ottWeb/ottWeb.svg",
@@ -648,7 +650,7 @@
 			"id": "quickRPadre",
 			"text": "QuickR",
 			"icon": "quickr",
-			"levels": [{
+			"children": [{
 				"id": "quickR",
 				"text": "QuickR",
 				"data": "aplicaciones/data/quickR/quickR.svg",
@@ -669,7 +671,7 @@
 			"id": "retro",
 			"text": "RETRO",
 			"icon": "retro",
-			"levels": [{
+			"children": [{
 				"id": "retroMQ",
 				"text": "RETRO MQ",
 				"icon": "retromq"
@@ -694,7 +696,7 @@
 			"id": "trackingAereo",
 			"text": "Tracking Aéreo",
 			"icon": "trackingaereo",
-			"levels": [{
+			"children": [{
 				"id": "ttWS",
 				"text": "TT (WS)",
 				"data": "aplicaciones/data/ttWS/ttWS.svg",
@@ -711,7 +713,7 @@
 			"id": "generadorEtiquetas",
 			"text": "Generador Etiquetas",
 			"icon": "generadoretiquetas",
-			"levels": [{
+			"children": [{
 				"id": "generadorEtiquetasWeb",
 				"text": "Web",
 				"data": "aplicaciones/data/generadorEtiquetasWeb/generadorEtiquetasWeb.svg",
@@ -1013,7 +1015,7 @@
 			"id": "muc",
 			"text": "MUC",
 			"icon": "muc",
-			"levels": [{
+			"children": [{
 				"id": "muc_base",
 				"text": "MUC",
 				"icon": "muc",
@@ -1209,7 +1211,7 @@
 			"id": "ventasRFID",
 			"text": "Ventas RFID",
 			"icon": "ventasrfid",
-			"levels": [{
+			"children": [{
 				"id": "ventasRFIDEuropa",
 				"text": "Europa",
 				"data": "aplicaciones/data/ventasRFIDEuropa/ventasRFIDEuropa.svg",
@@ -1238,7 +1240,7 @@
 			"id": "25rTGT",
 			"text": "25R - TGT",
 			"icon": "25rtgt",
-			"levels": [{
+			"children": [{
 				"id": "25rTGTEuropa",
 				"text": "Europa",
 				"data": "aplicaciones/data/25rTGTEuropa/25rTGTEuropa.svg",
@@ -1273,7 +1275,7 @@
 			"id": "14Movimientos",
 			"text": "14 Movimientos",
 			"icon": "14movimientos",
-			"levels": [{
+			"children": [{
 				"id": "tgt14MovimientosEntornoPrincipal",
 				"text": "Entorno Principal",
 				"data": "aplicaciones/data/tgt14MovimientosEntornoPrincipal/tgt14MovimientosEntornoPrincipal.svg",
@@ -1308,7 +1310,7 @@
 			"id": "78TGT",
 			"text": "78",
 			"icon": "78TGT",
-			"levels": [{
+			"children": [{
 				"id": "tgt78GestionComercialTienda",
 				"text": "Gestión Comercial Tienda",
 				"data": "aplicaciones/data/tgt78GestionComercialTienda/tgt78GestionComercialTienda.svg",
@@ -1336,7 +1338,7 @@
 			"id": "deliveries",
 			"text": "Deliveries",
 			"icon": "deliveries",
-			"levels": [{
+			"children": [{
 				"id": "deliveriesEuropa",
 				"text": "Europa",
 				"data": "aplicaciones/data/deliveriesEuropa/deliveriesEuropa.svg",
@@ -1365,7 +1367,7 @@
 			"id": "pdaRFID",
 			"text": "PDA RFID",
 			"icon": "pdarfid",
-			"levels": [{
+			"children": [{
 				"id": "rfidSincronizacion",
 				"text": "Sincronización",
 				"data": "",
@@ -1406,7 +1408,7 @@
 			"id": "19MercanciaOnline",
 			"text": "19 Mercancía Online",
 			"icon": "19mercanciaonline",
-			"levels": [{
+			"children": [{
 				"id": "gestionMercanciaOnlineTienda",
 				"text": "19 Online",
 				"data": "aplicaciones/data/gestionMercanciaOnlineTienda/gestionMercanciaOnlineTienda.svg",
@@ -1429,7 +1431,7 @@
 			"id": "moneyMappingPadre",
 			"text": "Money Mapping",
 			"icon": "moneymapping",
-			"levels": [{
+			"children": [{
 				"id": "moneyMapping",
 				"text": "Money Mapping",
 				"data": "aplicaciones/data/moneyMapping/moneyMapping.svg",
@@ -1481,7 +1483,7 @@
 			"id": "serviciosStockRFID",
 			"text": "Servicios Stock RFID",
 			"icon": "serviciosstockrfid",
-			"levels": [{
+			"children": [{
 				"id": "serviciosStockRFIDEuropa",
 				"text": "Europa",
 				"data": "aplicaciones/data/serviciosStockRFIDEuropa/serviciosStockRFIDEuropa.svg",
@@ -1510,7 +1512,7 @@
 			"id": "serviciosRFID",
 			"text": "Servicios RFID",
 			"icon": "serviciosrfid",
-			"levels": [{
+			"children": [{
 				"id": "serviciosRFIDEuropa",
 				"text": "Europa",
 				"data": "",
@@ -1545,7 +1547,7 @@
 			"id": "servicios14",
 			"text": "Servicios 14",
 			"icon": "servicios14",
-			"levels": [{
+			"children": [{
 				"id": "serviciosMovimientos",
 				"text": "Servicios Movimientos",
 				"data": "aplicaciones/data/serviciosMovimientos/serviciosMovimientos.svg",
@@ -1568,7 +1570,7 @@
 			"id": "iosComunPadre",
 			"text": "IOS Común",
 			"icon": "ioscomun",
-			"levels": [{
+			"children": [{
 				"id": "iosComun",
 				"text": "IOS Común",
 				"data": "aplicaciones/data/iosComun/iosComun.svg",
@@ -1618,7 +1620,7 @@
 				"id": "batchRFID25RCon",
 				"text": "Batch RFID 25RCon",
 				"icon": "batchrfid25rCon",
-				"levels": [{
+				"children": [{
 					"id": "batchRFID25RConEuropa",
 					"text": "Europa",
 					"data": "aplicaciones/data/batchRFID25RConEuropa/batchRFID25RConEuropa.svg",
@@ -1647,7 +1649,7 @@
 				"id": "batchRFID25RMae",
 				"text": "Batch RFID 25RMae",
 				"icon": "batchrfid25rmae",
-				"levels": [{
+				"children": [{
 					"id": "batchRFID25RMaeEuropa",
 					"text": "Europa",
 					"data": "",
@@ -1676,7 +1678,7 @@
 				"id": "batchRFID25RMov",
 				"text": "Batch RFID 25RMov",
 				"icon": "batchrfid25rmov",
-				"levels": [{
+				"children": [{
 					"id": "batchRFID25RMovEuropa",
 					"text": "Europa",
 					"data": "aplicaciones/data/batchRFID25RMovEuropa/batchRFID25RMovEuropa.svg",
@@ -1705,7 +1707,7 @@
 				"id": "batchRFIDDeliveries",
 				"text": "Batch RFID Deliveries",
 				"icon": "batchrfiddeliveries",
-				"levels": [{
+				"children": [{
 					"id": "batchRFIDDeliveriesEuropa",
 					"text": "Europa",
 					"data": "",
@@ -1759,7 +1761,7 @@
 			"id": "batchIOSComunPadre",
 			"text": "Batch IOS Común",
 			"icon": "batchioscomun",
-			"levels": [{
+			"children": [{
 				"id": "batchIosComun",
 				"text": "IOS Común",
 				"data": "aplicaciones/data/batchIosComun/batchIosComun.svg",

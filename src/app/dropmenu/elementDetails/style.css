@@ -1,0 +1,42 @@
+.element-details-wrapper {
+    font-size: 12px;
+    padding: 10px;
+}
+.element-details-wrapper .details-header {
+    border-bottom: grey 1px solid;
+    padding-bottom: 20px;
+  }
+
+.headline {
+    margin: 10px;
+}  
+
+.slidecontainer {
+    margin: 20px;
+}
+  
+.slidecontainer .slider {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex:1;
+    margin-right: 5px;
+}
+
+.flex-0 {
+    flex:0;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+  
