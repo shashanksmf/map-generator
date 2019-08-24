@@ -6,15 +6,12 @@ import './dropmenu.css';
 import Tree from 'react-animated-tree';
 import './styles.css';
 import ContextMenu from './context/ContextMenu';
-import ContentEditable from './ContentEditable';
 import FileSelector from './FileSelector';
 import Export from './Export';
 var data = require('./sample.json');
 
 let storeData = [];
-let  disable = true;
 let exportData ='';
-let newNodeName = '';
 export default class Dropmenu extends React.Component {
   constructor(props) {
     super();
@@ -43,7 +40,6 @@ export default class Dropmenu extends React.Component {
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.contextMenuAction = this.contextMenuAction.bind(this);
     this.sendDataToParent = this.sendDataToParent.bind(this);
-    this.sendNodeName = this.sendNodeName.bind(this)
     this.jsUcfirst = this.jsUcfirst.bind(this);
     this.isRenamed = this.isRenamed.bind(this);
   }
@@ -97,17 +93,14 @@ export default class Dropmenu extends React.Component {
     || Event.target.innerHTML == 'children'){
 
     }else{
-     // alert('rename')
    
       this.setState({
-        //editable:Event.target.innerHTML,
         treeSelected: params,
         isRename:true
       })
     }
   }
   treeClick = (Event,params) => {
-  //  console.log("treeClick params",params);
   console.log('Event ',Event.type ,'params ', params);
   
     Event.persist();
@@ -242,15 +235,7 @@ export default class Dropmenu extends React.Component {
     }
 
   }
-  sendNodeName = (nodeName) => {
-    console.log('nodeName ',nodeName);
-    
-    let { id, key } = this.state.treeSelected;
-    let modifiedData = mergeModifiedData(this.state.data, id, 'RENAME', key, nodeName)
-    this.setState({
-      data: modifiedData,
-    })
-  }
+ 
   sendDataToParent = (data) => {
     let { id, key } = this.state.treeSelected;
     let modifiedData = mergeModifiedData(this.state.data, id,"IMPORT" ,key, data);
@@ -274,7 +259,6 @@ export default class Dropmenu extends React.Component {
       <ContextMenu visible={this.state.contextMenuShow} contextMenuAction={this.contextMenuAction}></ContextMenu>
       <FileSelector sendDataToParent={this.sendDataToParent} opened={this.state.opened} ></FileSelector>
      <Export clicked={this.state.export} data={this.state.exportData}></Export>
-       <ContentEditable sendNodeName={this.sendNodeName} editable={this.state.editable}></ContentEditable>
         <Accordion>
           {Array.isArray(jsonData) && jsonData.map((i,item)=> {
             return (
