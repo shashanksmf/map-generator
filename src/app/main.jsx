@@ -25,16 +25,16 @@ class App extends React.Component {
                 { },
                 { size: '30%', resizable: false }
             ],
-            nodeId:null,
+            nodeId:'Comercial',
             logs:[],
-            elemId:''
+            elemId: 1,
+            sliderValue: null
         };
 
         this.selectedServices = this.selectedServices.bind(this)
     }
 
     onLayoutChange = (updatedState) => {
-
         this.setState({
             panes: updatedState
         });
@@ -44,6 +44,13 @@ class App extends React.Component {
         this.setState({
             nestedPanes: updatedState
         });
+    }
+
+    getSliderValue = () => {
+        if(this.state.nodeId) {
+        this.state.logs.push(`Action: update. Item id: ${this.state.nodeId}`);
+        this.setState({ logs: this.state.logs })
+        }
     }
 
     selectedServices = id => {
@@ -73,7 +80,14 @@ class App extends React.Component {
                         >
                             <div className="pane-content">
                                 <Headerbar children="element details"/>
-                                <ElementDetails nodeId={this.state.nodeId} elemId={this.state.elemId}></ElementDetails>
+                               
+                                <ElementDetails 
+                                    nodeId={this.state.nodeId} 
+                                    elemId={this.state.elemId}
+                                    getSliderValue={this.getSliderValue}
+                                >
+                                </ElementDetails>
+                            
                             </div>
                             <div className="pane-content logs">
                                 <Headerbar children="log"/>
@@ -84,7 +98,7 @@ class App extends React.Component {
                         </Splitter>
                         <div className="pane-content">
                             <Headerbar children="advanced"/>
-                            <Monitoring/>
+                            <Monitoring />
                         </div>
                     </Splitter>
 

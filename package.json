@@ -22,6 +22,7 @@
     "react-bootstrap": "^1.0.0-beta.11",
     "react-bootstrap-slider": "^2.2.2",
     "react-compound-slider": "^0.16.3",
+    "react-contenteditable": "^3.3.2",
     "react-dom": "^16.8.6",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",

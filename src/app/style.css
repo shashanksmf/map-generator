@@ -6,11 +6,35 @@
 
 .contextMenu .contextMenu--option {
     cursor: pointer;
-
 }
 
 
 .contextMenu .contextMenu--option:hover {
-    background-color: #f9f9f9; 
+    background-color:#dcd4d4; 
+}
+
+.treeview {
+    text-overflow: unset !important;
+    white-space: nowrap !important;
+    overflow: unset !important;
+}
+
+.react-sanfona-item-body {
+    overflow-x: auto !important;
+    height: auto;
+}
+
+.react-sanfona-item-body-wrapper {
+    min-height: 71% !important;
+    max-height: 71% !important;
+}
+
+.k-splitter-flex {
+    height: 100%;
+}
+
+.all-area > div {
+    /* height: auto !important; */
+    max-height: 100% !important;
 }
 

@@ -8,9 +8,11 @@ export default class ContextMenu extends React.Component {
 
     componentWillReceiveProps(nextPros) {
         console.log("nextPros",nextPros.visible)
+        if(this.state.visible != nextPros.visible) {
         this.setState({
             visible: nextPros.visible
         })
+        }
     }
     
     componentDidMount() {
@@ -31,7 +33,7 @@ export default class ContextMenu extends React.Component {
         if(!this.state.visible) return false
         event.preventDefault();
         
-        this.setState({ visible: true });
+      //  this.setState({ visible: true });
         
         const clickX = event.clientX;
         const clickY = event.clientY;
@@ -87,6 +89,9 @@ export default class ContextMenu extends React.Component {
                 <div className="contextMenu--option" onClick={() => this.props.contextMenuAction("REMOVE")}>Remove Node</div>
                 <div className="contextMenu--option" onClick={() => this.props.contextMenuAction("CUT")}>Cut Node</div>
                 <div className="contextMenu--option" onClick={() => this.props.contextMenuAction("PASTE")}>Paste Node</div>
+                <div className="contextMenu--option" onClick={() => this.props.contextMenuAction("IMPORT")}>Import</div>
+                <div className="contextMenu--option" onClick={() => this.props.contextMenuAction('EXPORT')}>Export</div>
+                <div className="contextMenu--option" onClick={() => this.props.contextMenuAction('CLONE')}>Clone</div>
             </div>
     };
 }

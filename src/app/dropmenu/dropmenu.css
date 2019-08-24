@@ -18,7 +18,7 @@ body {
 }
 
 .demo-container {
-  
+  height: 100%;
   width: 100%;
   
 
@@ -36,15 +36,26 @@ body {
 }
 .wrapper-container{
     width: 100%;
-    overflow-y: scroll;
-    height: 720px;
-    
+    /* overflow-y: scroll; */
+    /* height: 720px; */
+    height: 94%;
 }
 .wrapper-container::-webkit-scrollbar { 
-    display: none; 
+    display: block; 
 } 
 .react-sanfona {
   border-bottom: 1px solid #ccc; 
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-sanfona .react-sanfona-item {
+  flex:0;
+}
+
+.react-sanfona-item.react-sanfona-item-expanded {
+  flex:1;
 }
 
 .react-sanfona-item-title {

@@ -8,13 +8,15 @@ export default class ElementDetails extends React.Component {
       };
       changeValue = Event => {
         this.setState({ currentValue: Event.target.value });
+        this.props.getSliderValue()
       };
+      
     render() {
         const { disabled } = this.state;
        
         return(
             <div className="element-details-wrapper">
-                <p className="details-header">
+                <div className="details-header">
                     <div className="text-block flex">
                         <div className="text-left flex-1">ID Monitor</div>
                         <div className="text-right flex-0">{this.props.elemId || ''}</div>
@@ -23,15 +25,15 @@ export default class ElementDetails extends React.Component {
                         <div className="text-left flex-1">Nome em ferramenta origem</div>
                         <div className="text-right flex-0">{this.props.nodeId || ""}</div>
                     </div>
-                </p>       
-                <p className="details-body">
+                </div>       
+                <div className="details-body">
                     <div className="headline"><b >ATRIBUTOS DE PROPAGAÇÃO</b></div>    
                     <div>
                     <div className="text-block flex">
                         <div className="text-left flex-1">Criticidade</div>
                         <div className="text-right flex-1"><input type="range" min="1" max="100" 
-                        onChange={this.changeValue} value={this.state.currentValue} 
-                        class="slider" id="myRange" /></div>
+                        onChange={this.changeValue} value={this.state.currentValue}
+                        className="slider" id="myRange" /></div>
                     </div>
                     <div className="text-block flex">
                         <div className="text-left flex-1">Criticidade</div>
@@ -46,7 +48,7 @@ export default class ElementDetails extends React.Component {
                     </div>
                       
                     </div>
-                </p>
+                </div>
             </div>
         )
     }
